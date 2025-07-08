@@ -1,7 +1,15 @@
-import type { NextConfig } from "next";
+import type {NextConfig} from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+    images: {// Így engedélyezzük hogy elérje az adott útvonalat és ne dobjon hibát a képek külsső forrásból való betöltésekor!
+        dangerouslyAllowSVG: true,
+        remotePatterns: [
+            {
+                protocol: "https",
+                hostname: "*"
+            }
+        ]
+    }
 };
 
 export default nextConfig;
