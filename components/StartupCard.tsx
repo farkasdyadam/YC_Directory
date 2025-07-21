@@ -9,7 +9,6 @@ import {Author, Startup} from "@/sanity/types";
 export type StartupTypeCard = Omit<Startup, "author"> & { author?: Author }
 
 export default function StartupCard({post}: { post: StartupTypeCard }) {
-    console.log(post)
     const {_createdAt, author, views, title, category, _id, description, image} = post;
     return (
         <li className={"startup-card group"}>

@@ -15,6 +15,10 @@
     background-repeat: repeat-x;
 }
 
+@utility tag-tri {
+    @apply before:content-[''] before:absolute before:top-2 before:left-2 before:border-t-[10px] before:border-t-black before:border-r-[10px] before:border-r-transparent after:content-[''] after:absolute after:bottom-2 after:right-2 after:border-b-[10px] after:border-b-black after:border-l-[10px] after:border-l-transparent;
+}
+
 
 @theme {
     --color-primary: #EE2B69 ;
@@ -27,6 +31,7 @@
     --color-white: #FFFFFF ;
     --color-white-100: #F7F7F7 ;
 }
+
 
 @theme inline {
     --color-background: var(--background);
@@ -54,8 +59,6 @@
     --color-accent: var(--accent);
     --color-muted-foreground: var(--muted-foreground);
     --color-muted: var(--muted);
-    --color-secondary-foreground: var(--secondary-foreground);
-    --color-secondary: var(--secondary);
     --color-primary-foreground: var(--primary-foreground);
     --color-popover-foreground: var(--popover-foreground);
     --color-popover: var(--popover);
@@ -192,7 +195,7 @@
     }
 
     .startup-card_date {
-        @apply font-medium text-[16px] bg-[#FFE8F0] px-4 py-2 rounded-full group-hover:bg-white;
+        @apply text-[16px] bg-[#FFE8F0] px-4 py-2 rounded-full group-hover:bg-white;
     }
 
     .startup-card_desc {
@@ -204,6 +207,30 @@
     }
 
     .startup-card_btn {
-        @apply rounded-full bg-black-200 font-medium text-[16px] text-white px-5 py-3;
+        @apply rounded-full bg-black-200 text-[16px] text-white px-5 py-3;
+    }
+
+    .tag {
+        @apply bg-secondary px-6 py-3 font-bold rounded-sm uppercase relative tag-tri;
+    }
+
+    .category-tag {
+        @apply m-auto text-sm font-semibold bg-primary-100 px-2 py-1 rounded-full;
+    }
+
+    .divider {
+        @apply border-dotted bg-zinc-400 max-w-4xl my-10 mx-auto;
+    }
+
+    .view_skeleton {
+        @apply bg-zinc-400 h-10 w-24 rounded-lg fixed bottom-3 right-3;
+    }
+
+    .view-container {
+        @apply flex justify-end items-center mt-5 fixed bottom-3 right-3;
+    }
+
+    .view-text {
+        @apply font-medium text-[16px] bg-primary-100 px-4 py-2 rounded-lg capitalize;
     }
 }
