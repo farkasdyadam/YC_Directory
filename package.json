@@ -14,12 +14,14 @@
   "packageManager": "npm@10.5.2",
   "overrides": {
     "react": "$react",
-    "react-dom": "$react-dom"
+    "react-dom": "$react-dom",
+    "next": "$next"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.2.3",
     "@sanity/image-url": "^1.1.0",
     "@sanity/vision": "^3.98.1",
+    "@sentry/nextjs": "^9.40.0",
     "@tailwindcss/typography": "github:tailwindcss/typography",
     "@uiw/react-md-editor": "^4.0.8",
     "class-variance-authority": "^0.7.1",
@@ -35,6 +37,7 @@
     "sanity": "^3.98.1",
     "sanity-plugin-markdown": "^5.1.2",
     "server-only": "^0.0.1",
+    "slugify": "^1.6.6",
     "sonner": "^2.0.6",
     "styled-components": "^6.1.19",
     "tailwind-merge": "^3.3.1",
