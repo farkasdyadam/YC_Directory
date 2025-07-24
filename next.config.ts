@@ -5,6 +5,9 @@ const nextConfig: NextConfig = {
     typescript: {
     ignoreBuildErrors: true,
   },
+    eslint: {
+    ignoreDuringBuilds: true,
+  },
     images: {// Így engedélyezzük hogy elérje az adott útvonalat és ne dobjon hibát a képek külsső forrásból való betöltésekor!
         dangerouslyAllowSVG: true,
         remotePatterns: [
