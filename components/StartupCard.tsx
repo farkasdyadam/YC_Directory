@@ -13,7 +13,7 @@ export default function StartupCard({post}: { post: StartupTypeCard }) {
     return (
         <li className={"startup-card group"}>
             <div className={"flex justify-between"}>
-                <p className={"startup_card_date"}>
+                <p className={"startup-card_date" }>
                     {formatDate(_createdAt)}
                 </p>
                 <div className={"flex gap-1.5"}>
