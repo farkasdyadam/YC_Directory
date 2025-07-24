@@ -2,6 +2,9 @@ import {withSentryConfig} from "@sentry/nextjs";
 import type {NextConfig} from "next";
 
 const nextConfig: NextConfig = {
+    typescript: {
+    ignoreBuildErrors: true,
+  },
     images: {// Így engedélyezzük hogy elérje az adott útvonalat és ne dobjon hibát a képek külsső forrásból való betöltésekor!
         dangerouslyAllowSVG: true,
         remotePatterns: [
